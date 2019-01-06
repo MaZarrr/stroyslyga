@@ -5,6 +5,16 @@
         <a class="p-2 text-dark" href="#">Прайс-лист</a>
         <a class="p-2 text-dark" href="#">Цены</a>
       </nav>
-      <a class="btn btn-outline-primary mr-2 mb-2" href="#">Войти</a>
+      <?php
+        if($_COOKIE['log'] == ''):
+      ?>
+      <a class="btn btn-outline-primary mr-2 mb-2" href="auth.php">Войти</a>
       <a class="btn btn-outline-primary mb-2" href="/reg.php">Регистрация</a>
+      <?php
+        else:
+      ?>
+        <a class="btn btn-outline-primary mb-2" href="/auth.php">Личный кабинет</a>
+      <?php
+        endif;
+      ?>
 </div>

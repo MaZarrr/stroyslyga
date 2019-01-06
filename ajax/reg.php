@@ -26,14 +26,8 @@
   $hash = "s7fsaw32oais2wohdao";
   $pass = md5($pass . $hash); // функция защиты пароля, зашифровывает данные
 
-  $user = 'root';
-  $password = '';
-  $db = 'stroydb';
-  $host = 'localhost';
+  require_once '../mysql_connect.php';
 
-
-  $dsn = 'mysql:host='.$host.';dbname='.$db;
-  $pdo= new PDO($dsn, $user, $password);
   $sql = 'INSERT INTO `stroydb`.`users` (`name`, `email`, `login`, `pass`) VALUES (:name, :email, :login, :pass)';
   $query = $pdo->prepare($sql);
   $query->execute(['name'=>$username, 'email'=>$email, 'login'=>$login, 'pass'=>$pass]);

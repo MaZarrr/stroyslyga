@@ -7,4 +7,4 @@
       </nav>
       <a class="btn btn-outline-primary mr-2 mb-2" href="#">Войти</a>
       <a class="btn btn-outline-primary mb-2" href="/reg.php">Регистрация</a>
-    </div>
+</div>

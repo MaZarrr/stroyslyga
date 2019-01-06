@@ -31,8 +31,8 @@ require 'bloks/head.php' ?>
               <?php
               endif;
               ?>
-						</div>
-						<?php require 'bloks/aside.php'; ?>
+              <?php require 'bloks/aside.php'; ?>
+            </div>
 					</div>
 				</main>
 

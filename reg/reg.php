@@ -35,7 +35,6 @@
   $dsn = 'mysql:host='.$host.';dbname='.$db;
   $pdo= new PDO($dsn, $user, $password);
   $sql = 'INSERT INTO `stroydb`.`users` (`name`, `email`, `login`, `pass`) VALUES (:name, :email, :login, :pass)';
-  //$sql = 'INSERT INTO users(name, email, login, pass) VALUES(:name, :email, :login, :pass)';
   $query = $pdo->prepare($sql);
   $query->execute(['name'=>$username, 'email'=>$email, 'login'=>$login, 'pass'=>$pass]);
 

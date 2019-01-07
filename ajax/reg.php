@@ -7,16 +7,12 @@
   $error = '';
   if(strlen($username) <= 3) //strlen если длина этой строки менее чем 3 символа то выходим
     $error = 'Введите имя';
-    //exit();
   else if(strlen($email) <= 3)
       $error = 'Введите email';
-    //exit();
   else if(strlen($login) <= 3)
       $error = 'Введите логин';
-    //exit();
   else if(strlen($pass) <= 3)
       $error = 'Введите пароль';
-    //exit();
 
   if($error != '') { // если error не равна пустоте значит у нас есть ошибка
     echo $error;

@@ -4,6 +4,10 @@
         <a class="p-2 text-dark" href="/">Главная</a>
         <a class="p-2 text-dark" href="#">Прайс-лист</a>
         <a class="p-2 text-dark" href="#">Цены</a>
+        <?php
+          if($_COOKIE['log'] != '') // если куки не равно пустоте а это значит что мы вошли то,
+            echo '<a class="p-2 text-dark" href="/article.php">Добавить статью</a>'; // добавляем эту ссылку
+        ?>
       </nav>
       <?php
         if($_COOKIE['log'] == ''):

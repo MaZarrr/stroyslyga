@@ -9,7 +9,7 @@ require 'bloks/head.php' ?>
 					<div class="row">
 						<div class="col-md-8 mb-3">
               <?php
-                if($_COOKIE['log'] == ''): // если куки пустое те еще не используется то будет видна форма в остальных случ форму не видно
+                if($_COOKIE['login'] == ''): // если куки пустое те еще не используется то будет видна форма в остальных случ форму не видно
               ?>
               <h4>Авторизация</h4>
 							<form action="" method="post">
@@ -26,16 +26,16 @@ require 'bloks/head.php' ?>
               <?php
               else:
               ?>
-                <h2><?=$_COOKIE['log'] ?></h2>
+                <h2><?=$_COOKIE['login'] ?></h2>
                 <button class="btn btn-danger" id ="exit_btn">Выйти</div>
               <?php
               endif;
               ?>
-							<?php if($_COOKIE['log'])
+							<?php if($_COOKIE['login'])
 							require 'bloks/aside.php';
 							?>
             </div>
-						<?php if($_COOKIE['log'] == "")
+						<?php if($_COOKIE['login'] == "")
 						require 'bloks/aside.php';
 						?>
 					</div>

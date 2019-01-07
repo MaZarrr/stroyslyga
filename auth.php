@@ -31,8 +31,13 @@ require 'bloks/head.php' ?>
               <?php
               endif;
               ?>
-              <?php require 'bloks/aside.php'; ?>
+							<?php if($_COOKIE['log'])
+							require 'bloks/aside.php';
+							?>
             </div>
+						<?php if($_COOKIE['log'] == "")
+						require 'bloks/aside.php';
+						?>
 					</div>
 				</main>
 

@@ -21,7 +21,7 @@
   //$sql = 'INSERT INTO `stroydb`.`articles` (`title`, `intro`, `text`, `date`, `avtor`) VALUES (:title, :intro, :text, :date, :avtor)';
   $sql = 'INSERT INTO `stroydb`.`articles`(title, intro, text, data, avtor) VALUES (?, ?, ?, ?, ?)';
   $query = $pdo->prepare($sql);
-  $query->execute([$title, $intro, $text, time(), $_COOKIE['log']]);
+  $query->execute([$title, $intro, $text, time(), $_COOKIE['login']]);
   //$query->execute(['title'=>$title, 'intro'=>$intro, 'text'=>$text, 'date'=>time(), 'avtor'=>$_COOKIE['log']]);
 
   echo 'Готово';
